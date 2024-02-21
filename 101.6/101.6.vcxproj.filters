@@ -18,9 +18,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="printCard.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="printDeck.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -28,9 +25,6 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="shuffleDeck.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="getCardValue.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="deckInit.cpp">
@@ -42,18 +36,12 @@
     <ClCompile Include="userChoice.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="card.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="suits.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="advantages.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="card.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="printCard.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="printDeck.h">
@@ -63,9 +51,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="shuffleDeck.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="getCardValue.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="deckInit.h">
