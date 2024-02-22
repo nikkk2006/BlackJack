@@ -1,41 +1,37 @@
 #include "playBlackJack.h"
 
 
-BlackJackResult playBlackJack(std::array<Card, 52>& deck) {
-
-	Card* cardPtr = &deck[0];
+bool playBlackJack(Deck& deck) {
 
 	int userResult = 0;
 	int dealerResult = 0;
 
-	dealerResult += getCardValue(*cardPtr++);
+	dealerResult += deck.dealCard().getCardValue();
 	std::cout << "The dealer is showing: " << dealerResult << '\n';
 
-	userResult += getCardValue(*cardPtr++);
-	userResult += getCardValue(*cardPtr++);
+	userResult += deck.dealCard().getCardValue();
+	userResult += deck.dealCard().getCardValue();
 
 	do {
 		std::cout << "You have: " << userResult << '\n';
 
 		if (userResult > 21)
-			return BlackJackResult::DEALER_WIN;
+			return false;
 
-		userResult += getCardValue(*cardPtr++);
+		userResult += deck.dealCard().getCardValue();
 	} while (userChoice());
 
 	while (dealerResult < 17) {
 
-		dealerResult += getCardValue(*cardPtr++);
+		dealerResult += deck.dealCard().getCardValue();
 		std::cout << "The dealer now has: " << dealerResult << '\n';
 	}
 
-	if (dealerResult == userResult) {
-		return BlackJackResult::NOBODY_WIN;
-	}
-
 	if (dealerResult > 21) {
-		return BlackJackResult::USER_WIN;
+		return true;
 	}
 
-	return (userResult > dealerResult) ? BlackJackResult::USER_WIN : BlackJackResult::DEALER_WIN;
+	return 0;
 }
+
+

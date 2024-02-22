@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-bool userChoice();
+char userChoice();
 
 #endif // !USERCHOICE_H
 

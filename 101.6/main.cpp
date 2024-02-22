@@ -1,26 +1,20 @@
-#include <array>
+#include <iostream>
 #include <ctime>
-#include "card.h"
-#include "deckInit.h"
-#include "shuffleDeck.h"
+#include "Deck.h"
 #include "playBlackJack.h"
 
 
 int main() {
-	srand(time(NULL));
+	srand(static_cast<unsigned int>(time(0)));
+	rand();
 
-	std::array<Card, 52> deck;
+	Deck deck;
+	deck.shuffleDeck();
 
-	deckInit(deck);
-	shuffleDeck(deck);
-
-	BlackJackResult result = playBlackJack(deck);
-
-	switch (result) {
-	case BlackJackResult::USER_WIN: std::cout << "You win" << std::endl; break;
-	case BlackJackResult::DEALER_WIN: std::cout << "Dealer win" << std::endl; break;
-	case BlackJackResult::NOBODY_WIN: std::cout << "Draw" << std::endl; break;
-	}
+	if(playBlackJack(deck))
+		std::cout << "You win!\n";
+	else
+		std::cout << "You lose!\n";
 
 	return 0;
 }

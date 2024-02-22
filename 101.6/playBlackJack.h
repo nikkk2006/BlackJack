@@ -3,13 +3,10 @@
 
 
 #include <iostream>
-#include <array>
-#include "card.h"
-#include "getCardValue.h"
 #include "userChoice.h"
-#include "BlackJackResult.h"
+#include "Deck.h"
 
-BlackJackResult playBlackJack(std::array<Card, 52>& deck);
+bool playBlackJack(Deck &deck);
 
 #endif // !PLAYBLACKJACK_H
 

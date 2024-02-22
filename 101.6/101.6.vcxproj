@@ -129,22 +129,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="card.cpp" />
-    <ClCompile Include="deckInit.cpp" />
+    <ClCompile Include="Deck.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="playBlackJack.cpp" />
-    <ClCompile Include="printDeck.cpp" />
-    <ClCompile Include="shuffleDeck.cpp" />
-    <ClCompile Include="swapCard.cpp" />
     <ClCompile Include="userChoice.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BlackJackResult.h" />
     <ClInclude Include="card.h" />
-    <ClInclude Include="deckInit.h" />
+    <ClInclude Include="Deck.h" />
     <ClInclude Include="playBlackJack.h" />
-    <ClInclude Include="printDeck.h" />
-    <ClInclude Include="shuffleDeck.h" />
-    <ClInclude Include="swapCard.h" />
     <ClInclude Include="userChoice.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
